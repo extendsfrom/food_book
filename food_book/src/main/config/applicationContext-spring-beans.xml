@@ -24,7 +24,7 @@
 			</list>
 		</property>
 	</bean>
-	<import resource="applicationContext-spring-mybatis-jms.xml"/>
+	<!-- <import resource="applicationContext-spring-mybatis-jms.xml"/> -->
 	
 	
 	<!-- 连接池 -->

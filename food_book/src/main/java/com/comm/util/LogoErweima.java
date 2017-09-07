@@ -10,13 +10,9 @@ import java.awt.geom.RoundRectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.Hashtable;
-import java.util.Random;
 
 import javax.imageio.ImageIO;
-
-import org.apache.camel.component.properties.SysPropertiesFunction;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
