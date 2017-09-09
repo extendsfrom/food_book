@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mahy.spring.demo</groupId>
-	<artifactId>springmvc-mybatis-demo</artifactId>
+	<artifactId>food_book</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springmvc-mybatis-demo Maven Webapp</name>
+	<name>food_book Maven Webapp</name>
 	<url>http://www.mvnrepository.com</url>
 	
 	<properties>  
@@ -232,9 +232,9 @@
 
 		<!-- 文档处理begin -->
 		<dependency>
-		  <groupId>org.jvnet.hudson.dom4j</groupId>
-		  <artifactId>dom4j</artifactId>
-		  <version>1.6.1-hudson-4</version>
+		    <groupId>dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
+		    <version>1.6</version>
 		</dependency>
 		<!-- 文档处理end -->
 		
