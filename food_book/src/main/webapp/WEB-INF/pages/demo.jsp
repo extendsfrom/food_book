@@ -2,46 +2,65 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript" src="http://pic.lvmama.com/min/index.php?f=/js/new_v/jquery-1.7.2.min.js"></script>
-<%-- <script src="<%=request.getContextPath()%>/js/jquery-1.4.4.min.js"></script> --%>
-<script src="<%=request.getContextPath()%>/js/dialog.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>厨神</title>
+	<link rel="stylesheet" media="screen" href="css/style.css">
+	<style type="text/css">
+		.register {
+			width: 400px;
+			height: 500px;
+			/* background-color: red; */
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -200px;
+			margin-top: -250px;	
+		}
+	</style>
 </head>
 <body>
-	<input name="right_button08Submit" type="button" value="确定" class="right-button09" id="modifySubmit"/>
-	<input name="right_button08Submit" type="button" value="测试缓存" class="right-button09" id="memSubmit"/>
+	<div class="register">
+		<div style="width: 100%;height: 100px;text-align: center;">
+			<font style="font-family: cursive;font-size: 60px;font-weight: bolder;color: #0F88EB;">厨神</font><br>
+			<font style="font-family: STFangsong;font-size: 20px;color: #0F88EB;">与世界分享你的知识、经验和见解</font>
+		</div>
+		<div style="width: 100%;height: 40px;">
+			<div style="width: 50%;height: 100%; float: left;text-align: right;">
+				<a style="line-height: 40px;font-family: STFangsong;margin-right: 20px;font-size: 18px;color: #d5d5d5;">注册</a>
+			</div>
+			<div style="width: 50%;height: 100%; float: left;text-align: letter-spacing;">
+				<a style="line-height: 40px;font-family: STFangsong;margin-left: 20px;font-size: 18px;color: #d5d5d5;">登录</a>
+			</div>
+		</div>
+		<div style="width: 90%;height: 120px;margin: 0 auto;border: solid #d5d5d5 1px; background-color:  white;border-radius:3px;">
+			<div style="width: 100%;height: 38px;border-bottom: solid #d5d5d5 1px;">
+				<input type="text" value="昵称" style="width: 80%;height: 80%;border: none;margin-left: 10%;"/>
+			</div>
+			<div style="width: 100%;height: 38px;border-bottom: solid #d5d5d5 1px;">
+				<input type="text" value="手机号" style="width: 80%;height: 80%;border: none;margin-left: 10%;"/>
+			</div>
+			<div style="width: 100%;height: 40px;">
+				<input type="text" value="密码（不少于6位）" style="width: 80%;height: 80%;border: none;margin-left: 10%;"/>
+			</div>
+		</div>
+		<div style="width: 90%;height: 240px;margin: 0 auto;">
+			<div style="width: 100%;height: 40px;margin-top: 20px;">
+				<button style="width: 360px;height: 100%; background-color: #0F88EB;border: solid 1px #0F88EB;border-radius:3px;font-family: STFangsong;font-size: 15px;color: white;">注册厨神</button>
+			</div>
+			<div style="width: 100%;height: 40px;margin-top: 20px;">
+				<button style="width: 360px;height: 100%; border: solid 1px #d5d5d5;border-radius:3px;font-family: STFangsong;font-size: 14px;">
+					点击「注册」按钮，即代表你同意《厨神协议》
+				</button>
+			</div>
+			<div style="width: 100%;height: 40px;margin-top: 60px;">
+				<button style="width: 360px;height: 100%; border: solid 1px #d5d5d5;border-radius:3px;font-family: STFangsong;font-size: 14px;color: #0F88EB;">
+					下载厨神 App
+				</button>
+			</div>
+		</div>
+	</div>
+	<div id="particles-js"></div>
 </body>
-<script type="text/javascript">
-	$("#modifySubmit").click(function(){
-		var result="{result:'当前工作IP=10.200.1.203'}" ;
-		var ip=eval(result);
-		var r = confirm(ip);
-		if(r==true){
-			$.ajax({
-				type:"POST", 
-				url:'http://super.lvmama.com/gateway/payment_gateway_configure!updateMemcached.do' + '?random=' + Math.random(), 
-				//data:$("#addForm").serialize(), 
-				async: false, 
-				dataType: 'JSONP',
-				success:function (result) {
-					var message=eval(result);
-					alert(message);
-				}
-			});
-		}
-	});
-	$("#memSubmit").click(function(){
-			$.ajax({
-				type:"POST", 
-				url:'http://127.0.0.1:8080/springmvc-mybatis-demo/index/memtest.do', 
-				async: false, 
-				//dataType: 'JSON',
-				success:function (result) {
-					console.log(result);
-					alert(result);
-				}
-			});
-	});
-</script>
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
 </html>
