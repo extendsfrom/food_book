@@ -42,4 +42,11 @@ public class StringUtil {
 		}
 		return out.toString();
 	}
+	
+	public static boolean isEmpty(Object obj) {
+		if(null == obj || "".equals(String.valueOf(obj))) {
+			return true;
+		}
+		return false;
+	}
 }

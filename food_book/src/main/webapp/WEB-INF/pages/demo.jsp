@@ -32,21 +32,23 @@
 				<a style="line-height: 40px;font-family: STFangsong;margin-left: 20px;font-size: 18px;color: #d5d5d5;">登录</a>
 			</div>
 		</div>
-		<div style="width: 90%;height: 120px;margin: 0 auto;border: solid #d5d5d5 1px; background-color:  white;border-radius:3px;">
-			<div style="width: 100%;height: 38px;border-bottom: solid #d5d5d5 1px;">
-				<input type="text" value="昵称" style="width: 80%;height: 80%;border: none;margin-left: 10%;"/>
-			</div>
-			<div style="width: 100%;height: 38px;border-bottom: solid #d5d5d5 1px;">
-				<input type="text" value="手机号" style="width: 80%;height: 80%;border: none;margin-left: 10%;"/>
-			</div>
-			<div style="width: 100%;height: 40px;">
-				<input type="text" value="密码（不少于6位）" style="width: 80%;height: 80%;border: none;margin-left: 10%;"/>
-			</div>
+		<div style="width: 90%;height: 160px;margin: 0 auto;border: solid #d5d5d5 1px; background-color:  white;border-radius:3px;">
+			<form action="<%=request.getContextPath()%>/user/userRegister.do" method="post">
+				<div style="width: 100%;height: 38px;border-bottom: solid #d5d5d5 1px;">
+					<input name="userName" type="text" placeholder="昵称" style="width: 80%;height: 90%;border: 0;outline:medium;margin-left: 10%;"/>
+				</div>
+				<div style="width: 100%;height: 38px;border-bottom: solid #d5d5d5 1px;">
+					<input name="userPhone" type="text" placeholder="手机号" style="width: 80%;height: 90%;border: 0;outline:medium;border: none;margin-left: 10%;"/>
+				</div>
+				<div style="width: 100%;height: 40px;">
+					<input name="userPassword" type="text" placeholder="密码（不少于6位）" style="width: 80%;height: 90%;border: 0;outline:medium;border: none;margin-left: 10%;"/>
+				</div>
+				<div style="width: 100%;height: 40px;margin-top: 20px;">
+					<button style="width: 360px;height: 100%; background-color: #0F88EB;border: solid 1px #0F88EB;border-radius:3px;font-family: STFangsong;font-size: 15px;color: white;" onclick="doRegister();">注册厨神</button>
+				</div>
+			</form>
 		</div>
-		<div style="width: 90%;height: 240px;margin: 0 auto;">
-			<div style="width: 100%;height: 40px;margin-top: 20px;">
-				<button style="width: 360px;height: 100%; background-color: #0F88EB;border: solid 1px #0F88EB;border-radius:3px;font-family: STFangsong;font-size: 15px;color: white;">注册厨神</button>
-			</div>
+		<div style="width: 90%;height: 200px;margin: 0 auto;">
 			<div style="width: 100%;height: 40px;margin-top: 20px;">
 				<button style="width: 360px;height: 100%; border: solid 1px #d5d5d5;border-radius:3px;font-family: STFangsong;font-size: 14px;">
 					点击「注册」按钮，即代表你同意《厨神协议》

@@ -20,14 +20,12 @@ import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
-import com.mahy.service.UserServiceImpl;
 import com.mahy.vo.Constant;
-import com.mahy.vo.UserUser;
 
 @Controller
 @RequestMapping("/index")
 public class InedxAction extends BaseAction {
-	private static final Logger LOG = Logger.getLogger(InedxAction.class);
+	/*private static final Logger LOG = Logger.getLogger(InedxAction.class);
 	
 	@Autowired
 	private UserServiceImpl userService;
@@ -103,5 +101,5 @@ public class InedxAction extends BaseAction {
 
 	public void setModel(Map<String, String> model) {
 		this.model = model;
-	}
+	}*/
 }

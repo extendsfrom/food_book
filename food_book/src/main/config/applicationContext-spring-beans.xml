@@ -58,12 +58,12 @@
         value="classpath:com/mahy/dao/mapper/*.xml"指的是classpath(类路径)下com.mahy.dao.mapper包中的所有xml文件
         UserMapper.xml位于com.mahy.dao.mapper包下，这样UserMapper.xml就可以被自动扫描
          -->
-        <property name="mapperLocations" value="classpath*:com/mahy/dao/mapper/*.xml" />
+        <property name="mapperLocations" value="classpath*:com/food/book/dao/mapper/*.xml" />
     </bean>
     <!-- 配置扫描器 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 扫描com.mahy.dao这个包以及它的子包下的所有映射接口类 -->
-        <property name="basePackage" value="com.mahy.dao" />
+        <property name="basePackage" value="com.food.book.dao" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
     
@@ -83,7 +83,7 @@
   	</tx:advice>
   	<aop:config>    
   		 <!-- 把事务控制在Service层 -->
-	    <aop:pointcut id="txPc" expression="execution(public * com.mahy.service.*.*(..))" />
+	    <aop:pointcut id="txPc" expression="execution(public * com.food.book.service.*.*(..))" />
 	    <aop:advisor pointcut-ref="txPc" advice-ref="txAdvice" />
     </aop:config>
 </beans>
